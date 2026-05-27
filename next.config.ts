@@ -15,8 +15,5 @@ const nextConfig: NextConfig = {
   },
   
 };
-module.exports = {
-  reactStrictMode: true,
-  // Any other Next.js configuration options
-};
+
 export default nextConfig;
