@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-gold: oklch(0.79 0.13 80);
+  --color-cobalt: oklch(0.28 0.18 270);
+  --color-cream: oklch(0.97 0.015 85);
+  --color-background: oklch(0.995 0.005 90);
+  --font-display: "Cormorant Garamond", serif;
+  --tracking-luxe: 0.32em;
+}
+
+:root {
+  --radius: 0.25rem;
+  --gold: oklch(0.79 0.13 80);
+  --cobalt: oklch(0.28 0.18 270);
+  --cream: oklch(0.97 0.015 85);
+  --background: oklch(0.995 0.005 90);
+  --foreground: oklch(0.22 0.12 270);
+  --border: oklch(0.9 0.02 85);
+  --ring: oklch(0.79 0.13 80);
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: "Cormorant Garamond", serif; }
+  .tracking-luxe { letter-spacing: 0.32em; }
+  .tracking-wider-soft { letter-spacing: 0.18em; }
+  .gold-divider {
+    display: inline-block;
+    width: 64px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero-gradient {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--cobalt) 35%, transparent),
+      color-mix(in oklab, var(--cobalt) 15%, transparent),
+      color-mix(in oklab, var(--cobalt) 55%, transparent)
+    );
+  }
+  .vignette {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 50%,
+      color-mix(in oklab, var(--cobalt) 40%, transparent)
+    );
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up { animation: fade-in-up 1s ease-out both; }
+  @keyframes ken-burns {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.15); }
+  }
+  .animate-ken-burns { animation: ken-burns 12s ease-out both; }
+}
