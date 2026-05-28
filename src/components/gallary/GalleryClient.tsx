@@ -41,18 +41,21 @@ export default function GalleryClient({ slides }: { slides: Slide[] }) {
             />
           ))}
 
-          <div className="pointer-events-none absolute inset-0" />
-
-          <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 bg-cobalt/90 px-5 py-3 text-white">
-            <p className="text-[10px] uppercase text-gold">
-              {String(index + 1).padStart(2, "0")} /{" "}
-              {String(total).padStart(2, "0")}
-            </p>
-            <p className="font-display text-base sm:text-lg italic">
-              {slides[index].alt}
-            </p>
-          </div>
+          
         </div>
+         <div className="bg-cobalt px-5 py-3 text-white ">
+
+    <p className="text-[10px] uppercase text-gold">
+      {String(index + 1).padStart(2, "0")} /{" "}
+      {String(total).padStart(2, "0")}
+    </p>
+
+    <p className="font-display text-base sm:text-lg italic">
+      {slides[index].alt}
+    </p>
+
+  </div>
+
 
         {/* Arrows */}
         <button
