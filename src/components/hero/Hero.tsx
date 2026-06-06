@@ -1,20 +1,17 @@
 // hero/Hero.tsx
-import logo from "@/src/assets/logo-main.png";
+import logo from "@/src/assets/logo/logo-main.png";
 import HeroClient from "./HeroClient";
-import {fetchPageData } from "@/src/superbase/FetchPageData";
-import { FetchHeroImg } from "@/src/superbase/FetchHeroImg";
+import heroData from "@/src/assets/page contents/hero.json";
+import content from "@/src/assets/page contents/content.json";
 
-const heroImages = await FetchHeroImg();
 
-const slides = (heroImages ?? []).map((img) => ({
+const slides = heroData.map((img) => ({
     src: img.image_url,
     alt: img.alt_text,
   }));
 
-const data = await fetchPageData();
-
-const hero_title = data?.[0]?.hero_title? data[0].hero_title: "No data found";
-const hero_description = data?.[0]?.hero_subtitle? data[0].hero_subtitle: "No data found";
+const hero_title = content.hero_title? content.hero_title: "No data found";
+const hero_description = content.hero_subtitle? content.hero_subtitle: "No data found";
 
 export function Hero() {
   return (

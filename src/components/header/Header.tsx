@@ -1,5 +1,5 @@
 // header/Header.tsx
-import logoMark from "@/src/assets/logo-small.png";// change this
+import logoMark from "@/src/assets/logo/logo-small.png";// change this
 import HeaderClient from "./HeaderClient";
 
 const links = [

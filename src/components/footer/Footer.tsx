@@ -1,4 +1,4 @@
-import logo from "@/src/assets/logo-name.png";//chnag this 
+import logo from "@/src/assets/logo/logo-name.png";
 import Image from "next/image";
 
 export function Footer() {

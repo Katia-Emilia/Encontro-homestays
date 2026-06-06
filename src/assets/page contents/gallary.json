@@ -1,0 +1,32 @@
+[
+  {
+    "img_order": 1,
+    "image_url": "/assets/Gallary/bunkers.jpg",
+    "alt_text": "Modern shared hostel room with bunk beds and privacy curtains"
+  },
+  {
+    "img_order": 2,
+    "image_url": "/assets/Gallary/rooms.jpg",
+    "alt_text": "Spacious private bedroom with air conditioning, and large windows"
+  },
+  {
+    "img_order": 3,
+    "image_url": "/assets/Gallary/house.jpg",
+    "alt_text": "Homestay surrounded by tropical plants and a courtyard"
+  },
+  {
+    "img_order": 4,
+    "image_url": "/assets/Gallary/dining-room.jpg",
+    "alt_text": "Elegant dining area with a cozy home-style atmosphere"
+  },
+  {
+    "img_order": 5,
+    "image_url": "/assets/Gallary/balcony-view.jpg",
+    "alt_text": "Scenic sea view with lush greenery overlooking the coastline"
+  },
+  {
+    "img_order": 6,
+    "image_url": "/assets/Gallary/lounge.jpg",
+    "alt_text": "Bright and airy lounge with comfortable seating"
+  }
+]

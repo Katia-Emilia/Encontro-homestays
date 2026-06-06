@@ -1,11 +1,9 @@
-import logoMark from "@/src/assets/logo-map.png";
-import { fetchPageData } from "@/src/superbase/FetchPageData";
+import logoMark from "@/src/assets/logo/logo-map.png";
+import content from "@/src/assets/page contents/content.json";
 import Image from "next/image";
 
-const data = await fetchPageData();
-const about_title= (<>{data?.[0]?.about_title? data[0].about_title: "No data found"}</>
-);
-const about_description = data?.[0]?.about_description?? "No data found";
+const about_title = content.about_title;
+const about_description = content.about_description;
 
 export function About() {
   return (
@@ -34,7 +32,7 @@ export function About() {
             <div className="relative overflow-hidden bg-cream shadow-2xl">
               <iframe
                 title="Encontro Homestays Location"
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3845.5346054502966!2d73.80344699999999!3d15.455650000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDI3JzIwLjMiTiA3M8KwNDgnMTIuNCJF!5e0!3m2!1sen!2sin!4v1779745002459!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.5346396778796!2d73.80086637333581!3d15.455648155575217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc7c672ca87e1%3A0xf4dfaa5d6d2d8093!2sEncontro%20Homestays!5e0!3m2!1sen!2sin!4v1780767561546!5m2!1sen!2sin"
                 className="h-72 w-full sm:h-96 md:h-112"
                 loading="lazy"
               >

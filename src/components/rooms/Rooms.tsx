@@ -1,7 +1,5 @@
 import { RoomsClient } from "./RoomsClient";
-import room from "@/src/assets/room-1.jpg";
-import bunks from "@/src/assets/bunks.jpg";
-import Image from "next/image";
+
 import {
   BedDouble,
   Snowflake,
@@ -9,7 +7,7 @@ import {
   ShowerHead,
   Car
 } from "lucide-react";
-import { fetchPageData } from "@/src/superbase/FetchPageData";
+import content from "@/src/assets/page contents/content.json";
 
 const features = [
   { icon: BedDouble, label: "Comfortable Beds" },
@@ -20,10 +18,9 @@ const features = [
 ];
 
 
-const data = await fetchPageData();
-const room_title = (<>{data?.[0]?.amenities_title? data[0].amenities_title: "No data found"}</>
+const room_title = (<>{content.amenities_title? content.amenities_title: "No data found"}</>
 );
-const room_description = data?.[0]?.amenities_description? data[0].amenities_description: "No data found";
+const room_description = content.amenities_description? content.amenities_description: "No data found";
 
 export function Rooms() {
   return (
@@ -42,20 +39,11 @@ export function Rooms() {
 
         <div className="mt-16 grid items-stretch gap-10 lg:grid-cols-2">
           <RoomsClient />
-          {/* <div className="relative">
-            <Image
-              src={room}
-              alt="Bedroom in Encontro Homestays"
-              className="h-full w-full object-cover shadow-2xl"
-              loading="lazy"
-              width={1280}
-              height={1280}
-            />
-          </div> */}
+        
 
-          {/* Luxurious features panel */}
+          
           <div className="relative bg-gradient-to-br from-background via-background to-cream p-10 sm:p-14 shadow-2xl flex flex-col overflow-hidden border border-gold/20">
-            {/* Gold corner ornaments */}
+            
 
             <div className="text-center">
               
@@ -71,7 +59,7 @@ export function Rooms() {
                   className="group flex flex-col items-center text-center"
                 >
                   <div className="relative">
-                    {/* Outer ring */}
+                    
                     <span
                       aria-hidden
                       className="absolute inset-0 rounded-full border border-gold/30 transition-transform duration-500 group-hover:scale-110 group-hover:border-gold/70"
@@ -86,22 +74,7 @@ export function Rooms() {
                 </div>
               ))}
             </div>
-{/* 
-            <div className="mt-auto pt-12 text-center">
-              <span className="block mx-auto gold-divider" />
-              <p className="mt-6 text-[10px] tracking-luxe uppercase text-cobalt/60">
-                Tariff
-              </p> 
-              <p className="mt-2 font-display text-3xl sm:text-4xl italic text-gold">
-                ₹3,500 <span className="text-cobalt/70 not-italic text-2xl">/ night</span>
-              </p>
-              <a
-                href="#contact"
-                className="mt-8 inline-flex items-center justify-center bg-cobalt px-12 py-4 text-xs tracking-luxe uppercase text-white transition hover:bg-gold hover:text-cobalt"
-              >
-                Check Availability
-              </a>
-            </div> */}
+            
             
           </div>
         </div>

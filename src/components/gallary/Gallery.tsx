@@ -1,24 +1,16 @@
 
 import Image from "next/image";
 import GalleryClient from "./GalleryClient";
-import { Waves, Palmtree, UtensilsCrossed, ShoppingBasket } from "lucide-react";
-import { FetchGalleryImg } from "@/src/superbase/FetchGalleryImg";
-import { FetchBeyondImg } from "@/src/superbase/FetchBeyondData";
+import beyond from "@/src/assets/page contents/beyondhouse.json";
+import gallaryData from "@/src/assets/page contents/gallary.json";
 
-import jettyImg from "@/src/assets/beyond-jetty.jpg";
-import beachImg from "@/src/assets/beyond-beach.jpg";
-import foodImg from "@/src/assets/beyond-food.jpg";
-import marketImg from "@/src/assets/beyond-market.jpg";
 
-const galleryImages = await FetchGalleryImg();
-const beyondImages = await FetchBeyondImg();
+const slides = gallaryData.map((img) => ({
+  src: img.image_url,
+  alt: img.alt_text,
+}));
 
-const slides = (galleryImages ?? []).map((img) => ({
-    src: img.image_url,
-    alt: img.alt_text,
-  }));
-
-const beyondExperiences = (beyondImages ?? []).map((img) => ({
+const beyondExperiences = beyond.map((img) => ({
     img: img.image_url,
     title: img.title,
     dist: img.distance,

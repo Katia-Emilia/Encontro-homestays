@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import room from "@/src/assets/room-1.jpg";
-import bunks from "@/src/assets/bunks.jpg";
+import room from "@/src/assets/rooms images/room-1.jpg";
+import bunks from "@/src/assets/rooms images/bunks.jpg";
 
 const stayImages = [
   {
@@ -25,6 +25,7 @@ export function RoomsClient() {
   return (
     <div className="relative">
       <Image
+        key={selectedImage}   
         src={stayImages[selectedImage].src}
         alt={stayImages[selectedImage].alt}
         className="h-full w-full object-cover shadow-2xl transition-all duration-500"

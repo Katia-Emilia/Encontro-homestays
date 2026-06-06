@@ -1,0 +1,23 @@
+[
+  {
+    "img_order": 1,
+    "image_url": "/beyond-house/jetty_viewpoint.jpeg",
+    "title": "Dona Paula Jetty",
+    "distance": "5 min walk",
+    "description": "The iconic viewpoint where the Mandovi and Zuari meet the Arabian Sea"
+  },
+  {
+    "img_order": 2,
+    "image_url": "/assets/beyond-house/hawaii-beach.jpeg",
+    "title": "Beach",
+    "distance": "2 min walk",
+    "description": "Quieter stretches of soft sand that's perfect for an early morning walk"
+  },
+  {
+    "img_order": 3,
+    "image_url": "/assets/beyond-house/latinqtrs.jpeg",
+    "title": "Latin Quarters",
+    "distance": "20 min drive",
+    "description": "Explore Fontainhas & São Tomé, where Portuguese charm meets Goa's rich heritage"
+  }
+]
