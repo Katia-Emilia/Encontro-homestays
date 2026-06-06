@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 type Slide = {
-  src: any;
+  src: string;
   alt: string;
 };
 
@@ -57,9 +57,11 @@ export default function GalleryClient({ slides }: { slides: Slide[] }) {
   </div>
 
 
-        {/* Arrows */}
         <button
           onClick={prev}
+          type="button"
+          aria-label="Previous slide"
+          title="Previous slide"
           className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-6 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold text-cobalt shadow-md hover:bg-cobalt hover:text-gold"
         >
           <ChevronLeft className="h-5 w-5" />
@@ -67,6 +69,9 @@ export default function GalleryClient({ slides }: { slides: Slide[] }) {
 
         <button
           onClick={next}
+          type="button"
+          aria-label="Next slide"
+          title="Next slide"
           className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-6 z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold/40 bg-gold text-cobalt shadow-md hover:bg-cobalt hover:text-gold"
         >
           <ChevronRight className="h-5 w-5" />
@@ -79,6 +84,9 @@ export default function GalleryClient({ slides }: { slides: Slide[] }) {
           <button
             key={i}
             onClick={() => setIndex(i)}
+            type="button"
+            aria-label={`Go to slide ${i + 1}`}
+            title={`Go to slide ${i + 1}`}
             className={`group relative aspect-[4/3] overflow-hidden ${
               i === index
                 ? "ring-2 ring-gold ring-offset-2 ring-offset-background"
