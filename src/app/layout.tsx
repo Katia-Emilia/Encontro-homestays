@@ -2,6 +2,7 @@ import "./globals.css";
 import { Toaster } from "@/src/components/ui/sonner";
 
 export const metadata = {
+  metadataBase: new URL("https://encontrohomestays.com/"),
   title: "Encontro Homestays",
   description: "Where people & experiences come together", // fill this in properly
   icons: {
